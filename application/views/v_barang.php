@@ -25,25 +25,22 @@
 <br><a href="#tambah" class="btn btn-primary" data-toggle="modal" style="float: center;">Tambah</a><br><br>
 
 <?php }?>
-<table class="table table-hover table-stripped">
+<!-- <table class="table table-hover table-stripped"> -->
 
-	<thead>
-
-		<tr>
-
-			<td>No</td>
-			<td>Kode barang</td>
-			<td>Nama barang</td>
-			<!-- <td>Tahun</td> -->
-			<td>Kategori</td>
-			<!-- <td>Merk</td> -->
-			<td>Harga</td>
-			<td>Stok</td>
-
-		</tr>
-
-	</thead>
-
+	</thead> 
+	
+	<table class="table table-hover table-stripped">
+					<thead>
+						<tr>
+						<th>No</th>
+						<th>Kode Barang</th>
+						<th>Nama Barang</th>
+						<th>Kategori</th>
+						<th>Harga</th>
+						<th>Stok</th>
+						
+						</tr>
+					</thead>
 	<tbody>
 
 
@@ -63,11 +60,15 @@
 
 			<td><?php if($this->session->userdata('level')=="admin"){?>
 			<a href="#ubah" data-toggle="modal" onclick="edit(<?=$bk->kode_barang?>)"  class="btn btn-warning">Ubah</a>
-			<?php }else{ 		echo "Anda Kasir"; }?></td>
+			<?php }
+			// else{ 		echo "Anda Kasir"; }?>
+			</td>
 
 			<td><?php if($this->session->userdata('level')=="admin"){?>
 			<a href="<?=base_url('index.php/barang/hapus/'.$bk->kode_barang)?>" onclick="return confirm('apakah anda yakin untuk menghapus')"
-			class="btn btn-danger">Hapus</a><?php }else{ echo "Anda Kasir"; }?></td>
+			class="btn btn-danger">Hapus</a><?php }
+			// else{ echo "Anda Kasir"; }?>
+			</td>
 
 		</tr>
 	<?php endforeach?>
@@ -108,11 +109,6 @@
 							<td><input type="text" name="nama_barang" style="margin-left: 20px;"></td>
 						</tr>
 
-						<!-- <tr>
-							<td>Size</td>
-							<td><input type="number" name="size" style="margin-left: 20px;"></td>
-						</tr> -->
-
 						<tr>
 							<td>Kategori</td>
 							<td>
@@ -132,21 +128,13 @@
 							<td><input type="text" name="harga" style="margin-left: 20px;"></td>
 						</tr>
 
-						<!-- <tr>
-							<td>Merk</td>
-							<td><input type="text" name="merk" style="margin-left: 20px;"></td>
-						</tr> -->
-
 						<tr>
 							<td>Stok</td>
-							<td><input type="number" name="stok" style="margin-left: 20px;"></td>
+							<td><input type="text" name="stok" style="margin-left: 20px;"></td>
 						</tr>
 
 					</table>
-
-
 					<center><input type="submit" name="tambah" value="tambah" class="btn btn-warning" style="margin-top: 30px;"></center>
-
 				</form>
 
 			</div>
@@ -189,11 +177,6 @@
 							<td><input type="text" name="nama_barang"  required  id="nama_barang" style="margin-left: 20px;"></td>
 						</tr>
 
-						<!-- <tr>
-							<td>Size</td>
-							<td><input type="number" name="size" required  id="size" style="margin-left: 20px;"></td>
-						</tr> -->
-
 						<tr>
 							<td>Kategori</td>
 							<td>
@@ -213,14 +196,9 @@
 							<td><input type="text" name="harga" required  id="harga" style="margin-left: 20px;"></td>
 						</tr>
 
-						<!-- <tr>
-							<td>Merk</td>
-							<td><input type="text" name="merk"   id="barang" style="margin-left: 20px;"></td>
-						</tr> -->
-
 						<tr>
 							<td>Stok</td>
-							<td><input type="number" name="stok" required  id="stok" style="margin-left: 20px;"></td>
+							<td><input type="text" name="stok" required  id="stok" style="margin-left: 20px;"></td>
 						</tr>
 
 					</table>

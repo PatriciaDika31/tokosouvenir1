@@ -1,5 +1,5 @@
 
-<h1 style="text-align:center">Kategori</h1>
+<h1 style="text-align:center">Kategori Barang</h1>
 <?php if($this->session->flashdata('pesan')): ?>
 
 
@@ -15,42 +15,36 @@
 <?php }?>
 
 
-
-<table class="table table-hover table-stripped"> 
-
-<thead>
-	
-	<tr>
-		
-		<td>no</td><td>kode_kategori</td><td>nama kategori</td><td></td><td></td>
-
-	</tr>
-
-</thead>
+<table class="table table-hover table-stripped">
+	<thead>
+			<tr>
+			<th>No</th>
+			<th>Kode Kategori</th>
+			<th>Nama Kategori</th>
+			</tr>
+	</thead>
 
 <tbody>
-	
-
 <?php $no = 0; foreach($kategori as $kt): $no++;?>
-
-
 	<tr>
-		
-		<td><?=$no?></td><td><?=$kt->kode_kategori?></td><td><?=$kt->nama_kategori?></td>
+		<td><?=$no?></td>
+		<td><?=$kt->kode_kategori?></td>
+		<td><?=$kt->nama_kategori?></td>
 
-		<td><?php if($this->session->userdata('level')=="admin"){?> <a href="#ubah" data-toggle="modal" onclick="edit(<?=$kt->kode_kategori?>)"  class="btn btn-warning">Ubah</a><?php }else{ 		echo "anda kasir"; }?></td>
+		<td><?php if($this->session->userdata('level')=="admin"){?> <a href="#ubah" data-toggle="modal" onclick="edit(<?=$kt->kode_kategori?>)"  class="btn btn-warning">Ubah</a><?php }
+		// else{ 		echo "anda kasir"; }?>
+		</td>
 
-		<td><?php if($this->session->userdata('level')=="admin"){?><a href="<?=base_url('index.php/Kategori/hapus/'.$kt->kode_kategori)?>" class="btn btn-danger" onclick="return confirm('apakah anda yakin untuk menghapus')" >Hapus</a><?php }else{ echo "anda kasir"; }?></td>
+		<td><?php if($this->session->userdata('level')=="admin"){?><a href="<?=base_url('index.php/Kategori/hapus/'.$kt->kode_kategori)?>" class="btn btn-danger" onclick="return confirm('apakah anda yakin untuk menghapus')" >Hapus</a><?php }
+		// else{ echo "anda kasir"; }?>
+		</td>
 
 	</tr>
 
 
 
 <?php endforeach?>
-
-
 </tbody>	
-
 </table>
 
 

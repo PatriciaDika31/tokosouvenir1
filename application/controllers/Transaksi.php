@@ -11,14 +11,10 @@ class Transaksi extends CI_Controller {
 		$this->load->model('M_transaksi','mts');
 	}
 
-
-
 	public function index()
 	{
 
 	if($this->session->userdata('level')){
-
-
 		$data['konten']="v_transaksi";
 		$data['barang']=$this->mbk->ambilbarang();
 		$this->load->view('template', $data, FALSE);
@@ -34,22 +30,20 @@ class Transaksi extends CI_Controller {
 		if($this->input->post('bayar')){
 
 			$this->form_validation->set_rules('pembeli', 'pembeli', 'trim|required');
-			$this->form_validation->set_rules('bayaru', 'bayar', 'trim|required|greater_than_equal_to[$this->cart->total()]');
+			$this->form_validation->set_rules('bayar', 'bayar', 'trim|required|greater_than_equal_to[$this->cart->total()]');
 
 			if ($this->form_validation->run() == TRUE ) {
 
 			if($this->mts->cekstok() == 1){
-
-
 				$id_nota = $this->mts->simpan_db();
-
 				if($id_nota){
 
 					$this->session->set_flashdata('pesan', 'Transaksi '.$this->input->post('pembeli').' berhasil');
 					$data['dts']=$this->mts->ambil_dts($id_nota);
 					$data['ts']= $this->mts->ambil_ts($id_nota);
 
-					$bayar = $this->input->post('bayaru');
+					// $total += $
+					$bayar = $this->input->post('bayar');
 					$total = $this->cart->total();
 					$kembali =  $bayar - $total;
 
@@ -64,17 +58,15 @@ class Transaksi extends CI_Controller {
 
 					$nama=$this->input->post('pembeli');
 					$this->session->set_flashdata('pembeli', $nama);
-					$this->session->set_flashdata('pesan', 'anda gagal bertransaksi');
+					$this->session->set_flashdata('pesan', 'Anda Gagal Bertransaksi');
 					redirect('transaksi','refresh');
 
 				}
 
-			}else{
-
-
+			}else{         
 				$nama=$this->input->post('pembeli');
 				$this->session->set_flashdata('pembeli', $nama);
-				$this->session->set_flashdata('pesan', 'Mohon maaf barang anda tidak mencukupi');
+				$this->session->set_flashdata('pesan', 'Mohon maaf barang tidak mencukupi');
 				redirect('transaksi','refresh');
 			}
 
@@ -95,13 +87,9 @@ class Transaksi extends CI_Controller {
 					'qty'   => $this->input->post('banyak')[$i]
 					);$this->cart->update($data);
 			}
-
 			$nama=$this->input->post('pembeli');
-
 			$this->session->set_flashdata('pembeli', $nama);
-
 			redirect('Transaksi','refresh');
-
 		}
 
 	}

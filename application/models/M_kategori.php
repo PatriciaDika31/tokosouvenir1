@@ -15,7 +15,6 @@ class M_kategori extends CI_Model {
 	public function tambah(){
 			$tambah = array(
 				'nama_kategori' => $this->input->post('nama_kategori'),);
-				
 			return $this->db->insert('kategori', $tambah);
 
 	}

@@ -33,43 +33,12 @@ class Barang extends CI_Controller {
 
 		if ($this->form_validation->run() == TRUE) {
 
-			$config['upload_path'] = './assets/gambar';
-			$config['allowed_types'] = 'jpg|png';
-
-			if($_FILES['cover']['name'] != ""){
-
-				$this->load->library('upload', $config);
-
-
-				if(!$this->upload->do_upload('merk')){
-
-					$this->session->set_flashdata('pesan', $this->upload->display_errors());
-					redirect('barang','refresh');
-
-				}else{
-
-					if($this->mbk->tambah($this->upload->data('file_name'))){
-
-						$this->session->set_flashdata('pesan', 'anda berhasil menambah barang');
-					}else{
-						$this->session->set_flashdata('pesan', 'anda gagal menambah barang');
-					}
-
-					redirect('barang','refresh');
-
-
-				}
-
-			}else{
-
 				if($this->mbk->tambah('')){
 					$this->session->set_flashdata('pesan', 'anda berhasil menambah barang');
 				}else{
 					$this->session->set_flashdata('pesan', 'anda gagal menambah barang');
 				}
 				redirect('barang','refresh');
-			}
-
 		} else {
 			$this->session->set_flashdata('pesan', validation_errors());
 			redirect('barang','refresh');
@@ -83,59 +52,18 @@ class Barang extends CI_Controller {
 
 	}
 
-	public function update(){
-
-		if($this->input->post('update')){
-
-			if($_FILES['cover']['name']==""){
-
-				if($this->mbk->update()){
-
+public function update(){
+			if($this->mbk->update()){
 					$this->session->set_flashdata('pesan', 'sukses ubah data ');
-				}else{
-
-					$this->session->set_flashdata('pesan', 'gagal ubah data ');
-				}
-				redirect('barang','refresh');
-
-
 			}else{
 
-
-				$config['upload_path'] = './assets/gambar/';
-				$config['allowed_types'] = 'gif|jpg|png|jpeg';
-
-				$this->load->library('upload', $config);
-
-				if(!$this->upload->do_upload('cover')){
-
-					$this->session->set_flashdata('pesan', $this->upload->display_errors());
-					redirect('barang','refresh');
-
-				}else{
-
-
-					if($this->mbk->update_ft($this->upload->data('file_name'))){
-
-						$this->session->set_flashdata('pesan', 'sukses ubah data ');
-
-					}else{
-
-						$this->session->set_flashdata('pesan', 'gagal ubah data ');
-
-					}
-
-
-					redirect('barang','refresh');
-
-
-				}
+				$this->session->set_flashdata('pesan', 'gagal ubah data ');
 			}
-
-		}
+			redirect('barang','refresh');
+				
 
 	}
-
+	
 	public function hapus($kode_barang){
 		if($this->mbk->hapus($kode_barang)){
 

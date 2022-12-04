@@ -53,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/1ab.jpeg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="310px" src="<?=base_url()?>assets/images/1ab.jpeg"  style="height:200px; width 500px;" alt=""/>
 								<div class="captn">
-									<h4 style="text-align:center">BOOKING</h4>
+									<h4 style="text-align:center ">BOOKING</h4>
 									<p style="text-align:center">Kalung Kayu</p>
 								</div>
 							</a>
