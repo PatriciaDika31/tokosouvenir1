@@ -79,8 +79,6 @@ class M_Transaksi extends CI_Model {
 
 			}
 
-
-
 		public function ambil_dts($kode_transaksi){
 			return $this->db->join('barang', 'barang.kode_barang = detail_transaksi.kode_barang')
 						->where('kode_transaksi',$kode_transaksi)
