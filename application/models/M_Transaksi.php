@@ -3,9 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_Transaksi extends CI_Model {
 
+
 	public function cekstok(){
+
 			$ck=1;
-			for($i=0;$i<count($this->cart->contents());$i++){
+		for($i=0;$i<count($this->cart->contents());$i++){
 
 			$stok = $this->db->where('kode_barang', $this->input->post('kode_barang')[$i])->get('barang')->row()->stok;
 			$qty = $this->input->post('banyak')[$i];
@@ -20,10 +22,17 @@ class M_Transaksi extends CI_Model {
 
 			}
 
+
 			$ck = $cc*$ck;
+
 		}
+
 		return $ck;
+
+
 	}
+
+
 
 	public function simpan_db(){
 
@@ -67,10 +76,12 @@ class M_Transaksi extends CI_Model {
 					return 0;
 
 				}
+
 			}
 
-		public function ambil_dts($kode_transaksi){
 
+
+		public function ambil_dts($kode_transaksi){
 			return $this->db->join('barang', 'barang.kode_barang = detail_transaksi.kode_barang')
 						->where('kode_transaksi',$kode_transaksi)
 						->get('detail_transaksi')

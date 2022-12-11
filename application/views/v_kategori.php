@@ -1,19 +1,12 @@
 
 <h1 style="text-align:center">Kategori Barang</h1>
 <?php if($this->session->flashdata('pesan')): ?>
-
-
 	<div class="alert alert-warning"><?= $this->session->flashdata('pesan') ?></div>
-	
-
 <?php endif?>
-
-
 
 <?php if($this->session->userdata('level')=="admin"){?>
 <a href="#tambah" class="btn btn-primary" data-toggle="modal" style="float: right;">Tambah</a>
 <?php }?>
-
 
 <table class="table table-hover table-stripped">
 	<thead>
@@ -47,16 +40,11 @@
 </tbody>	
 </table>
 
-
-
 <div class="modal fade" id="tambah" >
 	<div class="modal-dialog">
-		
 	<div class="modal-content">
 	<div class="modal-header">
-	
 		<div class="row">
-
 			<div class="col-md-6">
 				<div class="modal-title">Tambah Kategori</div>
 			</div>
@@ -68,26 +56,16 @@
 	</div>	
 
 	<div class="modal-body">
-
-
 	<form action="<?=base_url('index.php/Kategori/tambah')?>" method="post" enctype="multipart/form-data">
-
 	<table>
-	
 
 		<tr>
-		<td>nama_kategori</td>
+		<td>Nama Kategori</td>
 		<td><input type="text" name="nama_kategori" required style="margin-left: 20px;"></td>
 		</tr>
-
-		
 	</table>
-				
-
 	<center><input type="submit" name="tambah" value="tambah" class="btn btn-warning" style="margin-top: 30px;"></center>
-
 </form>
-
 	</div>	
 	</div>
 	</div>
@@ -95,16 +73,11 @@
 </div>
 
 
-
-
 <div class="modal fade" id="ubah" >
 	<div class="modal-dialog">
-		
 	<div class="modal-content">
 	<div class="modal-header">
-	
 		<div class="row">
-
 			<div class="col-md-6">
 				<div class="modal-title">Ubah Kategori</div>
 			</div>
@@ -114,41 +87,27 @@
 
 				</div>
 	</div>	
-
 	<div class="modal-body">
-
-
 	<form action="<?=base_url('index.php/Kategori/update')?>" method="post" enctype="multipart/form-data">
-
 	<input type="hidden" name="kode_kategori" required id="kode_kategori" >
-
 	<table>
-	
 
 		<tr>
-		<td>nama_kategori</td>
+		<td>Nama Kategori</td>
 		<td><input type="text" name="nama_kategori" required  id="nama_kategori" style="margin-left: 20px;"></td>
 		</tr>
-
-		
 	</table>
-				
-
 	<center><input type="submit" name="tambah" value="Ubah" class="btn btn-warning" style="margin-top: 30px;"></center>
 
 </form>
-
 	</div>	
 	</div>
 	</div>
 
 </div>
 
-
-
 <script >
 	
-
 function edit(kode_kategori){
 	$.ajax({
 	type:"post",
@@ -161,7 +120,6 @@ function edit(kode_kategori){
 	}
 });
 }
-
 </script>
 
 

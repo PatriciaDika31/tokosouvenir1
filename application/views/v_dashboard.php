@@ -1,6 +1,5 @@
 	<h3 >Selamat Datang <?=$this->session->userdata('nama_user')?></h3>
 		<p class="panel-subtitle">Toko Souvenir</p>
-						
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-4">
@@ -19,38 +18,29 @@
 								<?php }?>
 								</div>
 								<div class="col-md-4">
-
 								<a href="<?=base_url('index.php/Histori')?>" style="color: black">
 									<div class="metric">
-										<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+										<span class="icon"><i class="fa fa-bar-chart"></i></span>
 										<p>
 											<span class="number"><?= $transaksi ?></span>
-											<span class="title">penjualan</span>
+											<span class="title">Transaksi</span>
 										</p>
 									</div>
-
 									</a>
 								</div>
 								<div class="col-md-4">
 								<a href="<?=base_url('index.php/Barang')?>" style="color: black">
 									<div class="metric">
-										<span class="icon"><i class="fa fa-bar-chart"></i></span>
+										<span class="icon"><i class="fa fa-shopping-bag"></i></span>
 										<p>
 											<span class="number"><?= $barang ?></span>
 											<span class="title">Barang</span>
 										</p>
 									</div>
-
 									</a>
 								</div>
 							</div>
-							
 						</div>
-
 	<div class="boss" style="width">
-
-
-
-
 	</div>
 				

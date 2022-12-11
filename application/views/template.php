@@ -28,29 +28,28 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="<?= base_url() ?>index.php"><img src="<?= base_url()?>assets/img/1.png"  class="img-responsive logo" style="width:50px; height:30px;"></a>
+				<a href="<?= base_url() ?>index.php"><img src="<?= base_url()?>assets/img/1.png" 
+				 class="img-responsive logo" style="width:50px; height:30px;"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
 					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
 				</div>
-				<form class="navbar-form navbar-left">
+				<!-- <form class="navbar-form navbar-left">
 					<div class="input-group">
 						<input type="text" value="" class="form-control" placeholder="Search...">
 						<span class="input-group-btn"><button type="button" class="btn btn-success">Go</button></span>
 					</div>
-				</form>
+				</form> -->
 				<div class="navbar-btn navbar-btn-right">
 				
 				</div>
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
-						
-						
 						<li class="dropdown">
-							<a href="<?= base_url() ?>#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?= base_url()?>assets/img/user.png" class="img-circle" alt="Avatar"> <span><?=$this->session->userdata('nama_user');?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="<?= base_url() ?>#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?= base_url()?>assets/img/user.png" class="img-circle" alt="Avatar"> <span><?=$this->session->userdata('nama_user');?></span>
+							<i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								
 								<li><a href="<?= base_url() ?>#"><i class="lnr lnr-user"></i> <span><?=$this->session->userdata('level')?></span></a></li>
 								<li><a href="<?= base_url('index.php/Login/logout') ?>"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
@@ -74,15 +73,11 @@
 						<li><a href="<?= base_url() ?>index.php/Gallery" class="active"><i class="glyphicon glyphicon-picture" style="color:black;"></i> <span style="color:black;">Galeri</span></a></li>
 						<li><a href="<?= base_url() ?>index.php/Barang" class="active"><i class="lnr lnr-pencil" style="color:black;"></i> <span style="color:black;" >Barang</span></a></li>
 						<li><a href="<?= base_url() ?>index.php/Kategori" class="active"><i class="lnr lnr-list" style="color:black;"></i> <span style="color:black;">Kategori</span></a></li>
-						<li><a href="<?= base_url() ?>index.php/Histori" class="active"><i class="fa fa-bookmark" style="color:black;"></i> <span style="color:black;">Histori</span></a></li>
-						
-
-						<?php if($this->session->userdata('level')=="kasir"){?>
 						<li><a href="<?= base_url() ?>index.php/Transaksi" class="active"><i class="lnr lnr-cart" style="color:black;"></i> <span style="color:black;">Transaksi</span></a></li>
-						<?php }?>
-
+						<li><a href="<?= base_url() ?>index.php/Histori" class="active"><i class="fa fa-bookmark" style="color:black;"></i> <span style="color:black;">Histori</span></a></li>
+		
 						<?php if($this->session->userdata('level')=="admin"){?>
-						<li><a href="<?= base_url() ?>index.php/Kasir" class="active"><i class="lnr lnr lnr-user" style="color:black;"></i> <span style="color:black;">Pegawai</span></a></li>
+						<li><a href="<?= base_url() ?>index.php/Kasir" class="active"><i class="lnr lnr lnr-user" style="color:black;"></i> <span style="color:black;">Tambah Kasir</span></a></li>
 						<?php }?>
 
 					</ul>

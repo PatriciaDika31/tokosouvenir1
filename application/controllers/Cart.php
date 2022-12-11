@@ -11,11 +11,6 @@ class Cart extends CI_Controller {
 		$this->load->model('M_barang','mbk');
 	}
 
-	public function index()
-	{
-		
-	}
-
 
 	public function tambah_cart($kode_barang){
 
@@ -35,14 +30,12 @@ class Cart extends CI_Controller {
 				'qty'     => 1,
 				'price'   => $bk->harga,
 				'name'    => $bk->nama_barang,
-
 				);
 
 			$this->cart->insert($data);
 			redirect('Transaksi','refresh');
 
 		}
-
 	}
 
 
@@ -53,14 +46,11 @@ class Cart extends CI_Controller {
 			);
 		
 		$this->cart->update($data);
-
-
 		redirect('Transaksi','refresh');
 	}
 
 
 	public function hapus_semua_cart(){
-
 		$this->cart->destroy();
 		redirect('Transaksi','refresh');
 	}

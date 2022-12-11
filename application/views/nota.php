@@ -10,28 +10,27 @@ Tanggal :<?= $ts->tanggal_beli?>
 	
 
 	<tr>
-	<th>no</th><th>judul</th><th>harga</th><th>jumlah</th><th>sub total</th>
+	<th>No</th>
+	<th>Judul</th>
+	<th>Harga</th>
+	<th>Jumlah</th>
+	<th>Sub Total</th>
 	</tr>
 
 	<?php $no=0; foreach($dts as $dts):$no++?>
 
 	<tr>
 
-	<td><?= $no?></td><td><?= $dts->nama_sepatu?></td><td><?= number_format($dts->harga)?></td><td><?= $dts->jumlah?></td><td><?= number_format($dts->harga*$dts->jumlah)?></td>
-
+	<td><?= $no?></td>
+	<td><?= $dts->nama_sepatu?></td>
+	<td><?= number_format($dts->harga)?></td>
+	<td><?= $dts->jumlah?></td><td><?= number_format($dts->harga*$dts->jumlah)?></td>
 	</tr>
 <?php endforeach?>
-
 	<tr>
-
 	<td colspan="2">total</td><td colspan="3"><?= $ts->total?></td><td>
-
 	</tr>
-
-
 </table>
-
-
 <script type="text/javascript">
 	
 window.print();
