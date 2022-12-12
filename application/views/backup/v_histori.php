@@ -10,7 +10,13 @@
 	
 	<tr>
 		
-		<td>no</td><td>No Nota</td><td>nama kasir</td><td>Pembeli</td><td>total</td><td>tanggal beli</td><td></td><td></td>
+		<td>no</td>
+		<td>No Nota</td>
+		<td>nama kasir</td>
+		<td>Pembeli</td>
+		<td>total</td>
+		<td>tanggal beli</td>
+		<td></td><td></td>
 
 	</tr>
 
@@ -24,7 +30,12 @@
 
 	<tr>
 		
-		<td><?=$no?></td><td><?=$ts->kode_transaksi?></td><td><?=$ts->nama_user?></td><td><?=$ts->nama_pembeli?></td><td><?=$ts->total?></td><td><?=$ts->tanggal_beli?></td>
+		<td><?=$no?></td>
+		<td><?=$ts->kode_transaksi?>
+	</td><td><?=$ts->nama_user?></td>
+	<td><?=$ts->nama_pembeli?></td>
+	<td><?=$ts->total?></td><td>
+		<?=$ts->tanggal_beli?></td>
 
 	</tr>
 
