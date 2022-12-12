@@ -13,7 +13,6 @@ class M_Transaksi extends CI_Model {
 			$qty = $this->input->post('banyak')[$i];
 			$cek = $stok - $qty;
 			if($cek < 0){
-
 				$cc = 0;
 
 			}else{
@@ -22,17 +21,11 @@ class M_Transaksi extends CI_Model {
 
 			}
 
-
 			$ck = $cc*$ck;
-
 		}
 
 		return $ck;
-
-
 	}
-
-
 
 	public function simpan_db(){
 
@@ -44,7 +37,6 @@ class M_Transaksi extends CI_Model {
 			$this->db->where('kode_barang', $this->input->post('kode_barang')[$i])->update('barang', $u_stok);
 			}
 
-
 			$s_transaksi = array('kode_user' =>  $this->session->userdata('kode_user'),
 								'nama_pembeli' =>$this->input->post('pembeli'),
 								'total' =>$this->cart->total(),
@@ -52,13 +44,11 @@ class M_Transaksi extends CI_Model {
 
 			$this->db->insert('transaksi', $s_transaksi);
 
-
 			$ts=$this->db->order_by('kode_transaksi', 'desc')
 						->where('nama_pembeli',$this->input->post('pembeli'))
 						->limit(1)
 						->get('transaksi')
 						->row();
-
 
 			for($i=0;$i<count($this->cart->contents());$i++){
 			
@@ -70,8 +60,6 @@ class M_Transaksi extends CI_Model {
 				if ($db){
 
 					return $ts->kode_transaksi;
-
-
 				}else{
 					return 0;
 

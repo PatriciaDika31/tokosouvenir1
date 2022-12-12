@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <head>
-<title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Gallery :: w3layouts</title>
+<!-- <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Gallery :: w3layouts</title> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -42,7 +42,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/2ab.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="305px;"src="<?=base_url()?>assets/images/2ab.jpg" style="height:200px; width 500px;" alt="" />
 								<div class="captn">
-									<h4 style="text-align:center">BOOKING</h4>
+									<!-- <h4 style="text-align:center" a href="<?= base_url() ?>index.php/Transaksi">BOOKING</h4> -->
+									 <!-- class="active" -->
 									<p style="text-align:center">Kalung Rumbai</p>
 								</div>
 							</a>
@@ -53,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/1ab.jpeg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="310px" src="<?=base_url()?>assets/images/1ab.jpeg"  style="height:200px; width 500px;" alt=""/>
 								<div class="captn">
-									<h4 style="text-align:center ">BOOKING</h4>
+									<!-- <h4 style="text-align:center ">BOOKING</h4> -->
 									<p style="text-align:center">Kalung Kayu</p>
 								</div>
 							</a>
@@ -64,7 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/3ab.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="305px;" src="<?=base_url()?>assets/images/3ab.jpg"  style="height:200px; width 500px;" alt=""/>
 								<div class="captn">
-									<h4 style="text-align:center">BOOKING</h4>
+									<!-- <h4 style="text-align:center">BOOKING</h4> -->
 									<p style="text-align:center">Kalung Lingkaran</p>
 								</div>
 							</a>
@@ -78,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/13.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="305px;" src="<?=base_url()?>assets/images/13.jpg"  style="height:200px; width 500px;" alt="" />
 								<div class="captn">
-									<h4 style="text-align:center">BOOKING</h4>
+									<!-- <h4 style="text-align:center">BOOKING</h4> -->
 									<p style="text-align:center">Papan Kayu Bentuk</p>
 								</div>
 							</a>
@@ -89,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/14.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="305px;" height="255px" src="<?=base_url()?>assets/images/14.jpg"  style="height:200px; width 500px;" alt="" />
 								<div class="captn">
-									<h4 style="text-align:center">BOOKING</h4>
+									<!-- <h4 style="text-align:center">BOOKING</h4> -->
 									<p style="text-align:center">Papan Kayu Lingkaran</p>
 								</div>
 							</a>
@@ -100,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/15.jpg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="305px;" src="<?=base_url()?>assets/images/15.jpg"  style="height:200px; width 500px;" alt="" />
 								<div class="captn">
-									<h4 style="text-align:center">BOOKING</h4>
+									<!-- <h4 style="text-align:center">BOOKING</h4> -->
 									<p style="text-align:center">Papan Kayu Persegi</p>
 								</div>
 							</a>
@@ -115,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/16.jpeg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="305px;" src="<?=base_url()?>assets/images/16.jpeg"  style="height:200px; width 500px;" alt="" />
 								<div class="captn">
-									<h4 style="text-align:center">BOOKING</h4>
+									<!-- <h4 style="text-align:center">BOOKING</h4> -->
 									<p style="text-align:center">Keranjang Tangan</p>
 								</div>
 							</a>
@@ -126,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/17.jpeg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="305px;" src="<?=base_url()?>assets/images/17.jpeg"  style="height:200px; width 500px;" alt="" />
 								<div class="captn">
-									<h4 style="text-align:center">BOOKING</h4>
+									<!-- <h4 style="text-align:center">BOOKING</h4> -->
 									<p style="text-align:center">Keranjang Lingkaran</p>
 								</div>
 							</a>
@@ -137,7 +138,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="example-image-link" href="<?=base_url()?>assets/images/20.jpeg" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
 								<img height="305px;" src="<?=base_url()?>assets/images/20.jpeg"  style="height:200px; width 500px;" alt="" />
 								<div class="captn">
-                 					<h4 style="text-align:center">BOOKING</h4>
+                 					<!-- <h4 style="text-align:center">BOOKING</h4> -->
 									<p style="text-align:center">Keranjang Panjang</p>
 								</div>
 							</a>

@@ -54,12 +54,13 @@
 						<th></th>
 						</tr>
 					<?php $no = 0; foreach($this->cart->contents() as $ct): $no++;?>
-
 						<input type="hidden" name="kode_barang[]" value="<?=$ct['id']?>">
 						<input type="hidden" name="rowid[] " value="<?=$ct['rowid']?>">
-
 						<tr>
-							<td><?=$no?></td></td><td><?=$ct['name']?></td><td><input type="number" name="banyak[]" value="<?=$ct['qty']?>" style="width:60px;"></td><td><?=number_format($ct['price'])?></td><td><?=number_format($ct['subtotal'])?>
+							<td><?=$no?></td></td>
+							<td><?=$ct['name']?></td>
+							<td><input type="text" name="banyak[]" value="<?=$ct['qty']?>" style="width:60px;"></td>
+							<td><?=number_format($ct['price'])?></td><td><?=number_format($ct['subtotal'])?>
 							<td> <a href="<?=base_url('index.php/Cart/hapus_cart/'.$ct['rowid'])?>" onclick="return confirm('apakah anda yakin untuk menghapus pesanan ini')" class="btn btn-danger">x</a></td>
 
 						</tr>
