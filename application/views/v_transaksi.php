@@ -55,7 +55,7 @@
 						<th></th>
 =======
 
-						<th>No</th><th>Nama Barang</th><th>Jumlah Barang</th><th>Harga</th><th>Subtotal</th><th></th>
+						<th>No</th><th>Nama Barang Toko</th><th>Jumlah Barang</th><th>Harga</th><th>Subtotal</th><th></th>
 
 >>>>>>> Stashed changes
 						</tr>
