@@ -47,7 +47,7 @@
 
 						<tr>
 						<th>No</th>
-						<th>Nama Branag</th>
+						<th>Nama Barang</th>
 						<th>Jumlah</th>
 						<th>Harga</th>
 						<th>Subtotal</th>
