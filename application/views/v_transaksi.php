@@ -46,12 +46,18 @@
 				<td colspan="4"><input type="text" name="pembeli" value="<?=$this->session->flashdata('pembeli');?>"></td></tr>
 
 						<tr>
+<<<<<<< Updated upstream
 						<th>No</th>
 						<th>Nama Branag</th>
 						<th>Jumlah</th>
 						<th>Harga</th>
 						<th>Subtotal</th>
 						<th></th>
+=======
+
+						<th>No</th><th>Nama Barang</th><th>Jumlah Barang</th><th>Harga</th><th>Subtotal</th><th></th>
+
+>>>>>>> Stashed changes
 						</tr>
 					<?php $no = 0; foreach($this->cart->contents() as $ct): $no++;?>
 						<input type="hidden" name="kode_barang[]" value="<?=$ct['id']?>">
