@@ -27,6 +27,5 @@ Tanggal : <?=date('Y-m-d')?><br>
 Pencetak  : <?=$this->session->userdata('nama_user') ?> 
 <script type="text/javascript">
 window.print();
-location.href="<?= base_url('index.php/Histori')?>";
 
 </script>

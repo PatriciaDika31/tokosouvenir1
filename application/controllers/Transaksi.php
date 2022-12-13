@@ -41,7 +41,7 @@ class Transaksi extends CI_Controller {
 
 				if($id_nota){
 
-					$this->session->set_flashdata('pesan', 'Transaksi '.$this->input->post('pembeli').' berhasil');
+					// $this->session->set_flashdata('pesan', 'Transaksi '.$this->input->post('pembeli').' berhasil');
 					$data['dts']=$this->mts->ambil_dts($id_nota);
 					$data['ts']= $this->mts->ambil_ts($id_nota);
 
@@ -54,7 +54,6 @@ class Transaksi extends CI_Controller {
 					$this->session->set_flashdata('pembeli', $nama);
 					$this->cart->destroy();
 					$this->load->view('nota', $data);
-
 				}
 				else{
 
