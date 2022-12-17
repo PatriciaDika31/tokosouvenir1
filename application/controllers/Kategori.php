@@ -17,7 +17,7 @@ class Kategori extends CI_Controller {
 		$data['konten']='v_kategori';
 		$this->load->view('template', $data);
 	}else{
-			redirect('Login','refresh');
+			redirect('Login','Refresh');
 	}
 		
 	}
@@ -25,7 +25,7 @@ class Kategori extends CI_Controller {
 	public function tambah(){
 
 		$this->mkt->tambah();
-		redirect('Kategori','refresh');
+		redirect('Kategori','Refresh');
 	}
 
 
@@ -39,12 +39,12 @@ class Kategori extends CI_Controller {
 
 	public function update(){
 			if($this->mkt->update()){
-					$this->session->set_flashdata('pesan', 'sukses ubah data ');
+					$this->session->set_flashdata('Pesan', 'Sukses Mengubah Data ');
 			}else{
 
-				$this->session->set_flashdata('pesan', 'gagal ubah data ');
+				$this->session->set_flashdata('Pesan', 'Gagal Mengubah Data ');
 			}
-			redirect('Kategori','refresh');
+			redirect('Kategori','Refresh');
 				
 
 	}
@@ -53,13 +53,13 @@ class Kategori extends CI_Controller {
 	public function hapus($kode_kategori){
 	if($this->mkt->hapus($kode_kategori)){
 
-		$this->session->set_flashdata('pesan', 'anda berhasil menghapus data kategori');
+		$this->session->set_flashdata('Pesan', 'Berhasil Menghapus Data Kategori');
 			redirect('Kategori','refresh');
 
 	}else{
 
-		$this->session->set_flashdata('pesan', 'anda gagal menghapus data kategori');
-			redirect('Kategori','refresh');
+		$this->session->set_flashdata('Pesan', 'Gagal Menghapus Data Kategori');
+			redirect('Kategori','Refresh');
 
 	}
 }

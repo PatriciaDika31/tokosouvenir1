@@ -69,8 +69,8 @@
 
 				<tr><td colspan="2">Total</td><td colspan="4"><?= number_format($this->cart->total())?></td></tr>
 				<tr><td colspan="2">Bayar</td><td colspan="4"><input type="text" name="bayaru"></td></tr>
-				<tr><td colspan="2">Kembali</td><td colspan="4"><input type="text" value="<?= $this->session->flashdata('kembali') ?>" name="kembaliu"></td></tr>
-				<tr><td colspan="2"><input type="submit" value="Bayar" name="bayar" class="btn btn-success"></td><td colspan="2"><a href="<?=base_url('index.php/Cart/hapus_semua_cart')?>" class="btn btn-danger" onclick="return confirm('apakah anda yakin untuk menghapus semua pesanan')">Hapus Cart</a>
+				<tr><td colspan="2">Kembali</td><td colspan="4"><input type="text" value="<?= $this->session->flashdata('kembali') ?>" name="kembali"></td></tr>
+				<tr><td colspan="2"><input type="submit" value="Bayar" name="bayar" class="btn btn-success"></td><td colspan="2"><a href="<?=base_url('index.php/Cart/hapus_semua_cart')?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin untuk menghapus semua pesanan')">Hapus Keranjang</a>
 				<!-- </td><td colspan="2"><input type="submit" value="Update_qty" name="update qty" class="btn btn-primary"></td></tr> -->
 
 			</table>
