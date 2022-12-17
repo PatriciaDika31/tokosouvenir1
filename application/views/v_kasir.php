@@ -75,7 +75,7 @@
 		</tr>
 		<tr>
 		<td>Password</td>
-		<td><input type="text" name="password" required style="margin-left: 20px;"></td>
+		<td><input type="password" name="password" required style="margin-left: 20px;"></td>
 		</tr>
 
 		<!-- <tr>
@@ -144,7 +144,7 @@
 
 		<tr>
 		<td>Password</td>
-		<td><input type="text" name="password" id="password" required style="margin-left: 20px;"></td>
+		<td><input type="password" name="password" id="password" required style="margin-left: 20px;"></td>
 		</tr>
 
 		<td><input type="hidden" name="level"  required id="level" style="margin-left: 20px;"></td>
