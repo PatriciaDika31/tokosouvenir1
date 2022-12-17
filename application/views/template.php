@@ -70,7 +70,6 @@
 
 
 						<li><a href="<?= base_url() ?>index.php/Dashboard" class="active"><i class="lnr lnr-home" style="color:black;"></i> <span style="color:black;">Dashboard</span></a></li>
-						<li><a href="<?= base_url() ?>index.php/Gallery" class="active"><i class="glyphicon glyphicon-picture" style="color:black;"></i> <span style="color:black;">Galeri</span></a></li>
 						<li><a href="<?= base_url() ?>index.php/Barang" class="active"><i class="lnr lnr-pencil" style="color:black;"></i> <span style="color:black;" >Barang</span></a></li>
 						<li><a href="<?= base_url() ?>index.php/Kategori" class="active"><i class="lnr lnr-list" style="color:black;"></i> <span style="color:black;">Kategori</span></a></li>
 						<li><a href="<?= base_url() ?>index.php/Transaksi" class="active"><i class="lnr lnr-cart" style="color:black;"></i> <span style="color:black;">Transaksi</span></a></li>
