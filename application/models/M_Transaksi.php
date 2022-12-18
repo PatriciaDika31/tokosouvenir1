@@ -5,7 +5,6 @@ class M_Transaksi extends CI_Model {
 
 
 	public function cekstok(){
-
 			$ck=1;
 		for($i=0;$i<count($this->cart->contents());$i++){
 
@@ -18,7 +17,6 @@ class M_Transaksi extends CI_Model {
 			}else{
 
 				$cc = 1;
-
 			}
 
 			$ck = $cc*$ck;
@@ -64,7 +62,6 @@ class M_Transaksi extends CI_Model {
 					return 0;
 
 				}
-
 			}
 
 		public function ambil_dts($kode_transaksi){
@@ -77,22 +74,17 @@ class M_Transaksi extends CI_Model {
 
 
 		public function ambil_ts($kode_transaksi){
-
 			return $this->db->join('user', 'user.kode_user = transaksi.kode_user')
 						->where('kode_transaksi',$kode_transaksi)
 						->get('transaksi')
 						->row();
-						
-
 		}
-
 
 		public function ambil_semua(){
 				return $this->db->join('user', 'user.kode_user = transaksi.kode_user')
 						->get('transaksi')
 						->result();
 		}
-
 }
 
 /* End of file M_Transaksi.php */

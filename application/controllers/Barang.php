@@ -60,8 +60,6 @@ public function update(){
 				$this->session->set_flashdata('Pesan', 'Gagal Mengubah Data ');
 			}
 			redirect('barang','refresh');
-				
-
 	}
 	
 	public function hapus($kode_barang){

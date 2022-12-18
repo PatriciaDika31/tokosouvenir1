@@ -42,7 +42,7 @@
 			<?php }?>
 			</td>
 			<td><?php if($this->session->userdata('level')=="admin"){?>
-			<a href="<?=base_url('index.php/barang/hapus/'.$bk->kode_barang)?>" onclick="return confirm('apakah anda yakin untuk menghapus')"
+			<a href="<?=base_url('index.php/barang/hapus/'.$bk->kode_barang)?>" onclick="return confirm('apakah anda yakin untuk menghapus?')"
 			class="btn btn-danger">Hapus</a><?php }?>
 			</td>
 		</tr>
@@ -50,6 +50,7 @@
 </tbody>
 </table>
 
+<!-- Tambah Barang -->
 <div class="modal fade" id="tambah" >
 	<div class="modal-dialog">
 
@@ -76,7 +77,6 @@
 							<td>
 								<select name="kategori" style="margin-left: 20px; ">
 									<?php foreach ($kategori as $kt): ?>
-
 										<option value="<?= $kt->kode_kategori?>" ><?= $kt->nama_kategori?></option>
 									<?php endforeach?>
 								</select>

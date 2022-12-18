@@ -72,11 +72,15 @@
 						<li><a href="<?= base_url() ?>index.php/Dashboard" class="active"><i class="lnr lnr-home" style="color:black;"></i> <span style="color:black;">Dashboard</span></a></li>
 						<li><a href="<?= base_url() ?>index.php/Barang" class="active"><i class="lnr lnr-pencil" style="color:black;"></i> <span style="color:black;" >Barang</span></a></li>
 						<li><a href="<?= base_url() ?>index.php/Kategori" class="active"><i class="lnr lnr-list" style="color:black;"></i> <span style="color:black;">Kategori</span></a></li>
-						<li><a href="<?= base_url() ?>index.php/Transaksi" class="active"><i class="lnr lnr-cart" style="color:black;"></i> <span style="color:black;">Transaksi</span></a></li>
+						<!-- <li><a href="<?= base_url() ?>index.php/Transaksi" class="active"><i class="lnr lnr-cart" style="color:black;"></i> <span style="color:black;">Transaksi</span></a></li> -->
 						<li><a href="<?= base_url() ?>index.php/Histori" class="active"><i class="fa fa-bookmark" style="color:black;"></i> <span style="color:black;">Histori</span></a></li>
 		
 						<?php if($this->session->userdata('level')=="admin"){?>
 						<li><a href="<?= base_url() ?>index.php/Kasir" class="active"><i class="lnr lnr lnr-user" style="color:black;"></i> <span style="color:black;">Tambah Kasir</span></a></li>
+						<?php }?>
+
+						<?php if($this->session->userdata('level')=="kasir"){?>
+						<li><a href="<?= base_url() ?>index.php/Transaksi" class="active"><i class="lnr lnr lnr-cart" style="color:black;"></i> <span style="color:black;">Transaksi</span></a></li>
 						<?php }?>
 
 					</ul>

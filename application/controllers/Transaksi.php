@@ -65,8 +65,6 @@ class Transaksi extends CI_Controller {
 				}
 
 			}else{
-
-
 				$nama=$this->input->post('pembeli');
 				$this->session->set_flashdata('pembeli', $nama);
 				$this->session->set_flashdata('pesan', 'Mohon Maaf Barang Tidak Mencukupi');
@@ -96,9 +94,7 @@ class Transaksi extends CI_Controller {
 			redirect('Transaksi','refresh');
 
 		}
-
 	}
-
 }
 
 /* End of file Transaksi.php */
