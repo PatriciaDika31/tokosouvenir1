@@ -14,7 +14,7 @@
 			<th>Kode User</th>
 			<th>Nama User</th>
 			<th>Username</th>
-			<th>Password</th>
+			<!-- <th>Password</th> -->
 			<th>Level</th>
 			</tr>
 	</thead>
@@ -30,7 +30,7 @@
 		<td><?=$no?></td>
 		<td><?=$sr->kode_user?></td>
 		<td><?=$sr->nama_user?></td><td><?=$sr->username?></td>
-		<td><?=$sr->password?></td>
+		<!-- <td><?=$sr->password?></td> -->
 		<td><?=$sr->level?></td>
 		<td><?php if($this->session->userdata('level')=="admin"){?> <a href="#ubah" data-toggle="modal" onclick="edit(<?=$sr->kode_user?>)"  class="btn btn-warning">Ubah</a><?php }else{ 		echo "anda kasir"; }?></td>
 		<td><?php if($this->session->userdata('level')=="admin"){?><a href="<?=base_url('index.php/Kasir/hapus/'.$sr->kode_user)?>" class="btn btn-danger" onclick="return confirm('apakah anda yakin untuk menghapus')" >Hapus</a><?php }else{ echo "anda kasir"; }?></td>

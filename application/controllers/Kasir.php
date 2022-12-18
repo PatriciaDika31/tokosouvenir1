@@ -11,7 +11,7 @@ class Kasir extends CI_Controller {
 
 	public function index()
 	{
-			if($this->session->userdata('level')){
+		if($this->session->userdata('level')){
 		$data['user']= $this->msr->ambil_user();
 		$data['konten']='v_kasir';
 		$this->load->view('template', $data);		
@@ -21,7 +21,9 @@ class Kasir extends CI_Controller {
 	}
 		
 	}
-
+//Tambah data 
+//akan menjalankan M_user di model dan method tamah 
+//jika sudah di jalankankan akan redirect atau menampilkan kasir 
 	public function tambah(){
 
 		$this->msr->tambah();
@@ -35,29 +37,29 @@ class Kasir extends CI_Controller {
 
 	}
 
-
+//Akan menjalankan M_user di model dibagaian method update 
 	public function update(){
 			if($this->msr->update()){
 
-					$this->session->set_flashdata('pesan', 'sukses ubah data ');
+					$this->session->set_flashdata('pesan', 'Sukses ubah data ');
 			}else{
 
-				$this->session->set_flashdata('pesan', 'gagal ubah data ');
+				$this->session->set_flashdata('pesan', 'Gagal ubah data ');
 			}
 			redirect('Kasir','refresh');
 	}
 
 
-
+//akan menghapus user kasir berdasarkan kode_user 
 	public function hapus($kode_user){
 	if($this->msr->hapus($kode_user)){
 
-		$this->session->set_flashdata('pesan', 'anda berhasil menghapus kasir');
+		$this->session->set_flashdata('pesan', 'Anda berhasil menghapus kasir');
 			redirect('Kasir','refresh');
 
 	}else{
 
-		$this->session->set_flashdata('pesan', 'anda gagal menghapus kasir');
+		$this->session->set_flashdata('pesan', 'Anda gagal menghapus kasir');
 			redirect('Kasir','refresh');
 	}
 }
