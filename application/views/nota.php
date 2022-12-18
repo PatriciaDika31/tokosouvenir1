@@ -8,7 +8,7 @@ Tanggal Transaksi : <?= $ts->tanggal_beli?>
 <table border="1px solid black" style="border-collapse: collapse;">
 	<tr>
 		<th>No</th>
-		<th>Judul</th>
+		<th>Nama Barang</th>
 		<th>Harga</th>
 		<th>Jumlah</th>
 		<th>Sub Total</th>

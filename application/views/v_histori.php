@@ -1,7 +1,7 @@
 
 <h1 style="text-align:center">Riwayat Penjualan</h1>
 
-<a href="<?=base_url('index.php/Histori/cetak_laporan')?>" class="btn btn-primary" style="float: right;">Print</a>
+<a href="<?=base_url('index.php/Histori/cetak_laporan')?>" class="btn btn-primary" style="float: right;">Cetak Histori</a>
 
 				<table class="table table-hover table-stripped">
 					<thead>
