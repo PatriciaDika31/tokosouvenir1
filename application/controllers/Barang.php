@@ -34,9 +34,9 @@ class Barang extends CI_Controller {
 		if ($this->form_validation->run() == TRUE) {
 
 				if($this->mbk->tambah('')){
-					$this->session->set_flashdata('pesan', 'anda berhasil menambah barang');
+					$this->session->set_flashdata('Pesan', 'Anda Berhasil Menambah Barang');
 				}else{
-					$this->session->set_flashdata('pesan', 'anda gagal menambah barang');
+					$this->session->set_flashdata('Pesan', 'Anda Gagal Menambah Barang');
 				}
 				redirect('barang','refresh');
 		} else {
@@ -54,10 +54,10 @@ class Barang extends CI_Controller {
 
 public function update(){
 			if($this->mbk->update()){
-					$this->session->set_flashdata('pesan', 'sukses ubah data ');
+					$this->session->set_flashdata('Pesan', 'Sukses Mengubah Data ');
 			}else{
 
-				$this->session->set_flashdata('pesan', 'gagal ubah data ');
+				$this->session->set_flashdata('Pesan', 'Gagal Mengubah Data ');
 			}
 			redirect('barang','refresh');
 				
@@ -67,12 +67,12 @@ public function update(){
 	public function hapus($kode_barang){
 		if($this->mbk->hapus($kode_barang)){
 
-			$this->session->set_flashdata('pesan', 'anda berhasil menghapus data barang');
+			$this->session->set_flashdata('Pesan', 'Anda Berhasil Menghapus Data Barang');
 			redirect('barang','refresh');
 
 		}else{
 
-			$this->session->set_flashdata('pesan', 'anda gagal menghapus data barang');
+			$this->session->set_flashdata('Pesan', 'Anda Gagal Menghapus Data Barang');
 			redirect('barang','refresh');
 		}
 	}
