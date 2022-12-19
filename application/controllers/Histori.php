@@ -21,7 +21,6 @@ class Histori extends CI_Controller {
 		}
 	}
 
-
 	public function cetak_laporan(){
 		$data['ts']=$this->mts->ambil_semua();
 		$this->load->view('Laporan', $data);

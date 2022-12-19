@@ -13,7 +13,6 @@ class M_Transaksi extends CI_Model {
 			$cek = $stok - $qty;
 			if($cek < 0){
 				$cc = 0;
-
 			}else{
 
 				$cc = 1;

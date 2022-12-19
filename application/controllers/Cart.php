@@ -11,20 +11,15 @@ class Cart extends CI_Controller {
 		$this->load->model('M_barang','mbk');
 	}
 
-
 	public function tambah_cart($kode_barang){
 
 		$bk = $this->mbk->ambilbarangcart($kode_barang);
-
 		$stok =$bk->stok;
-
 		if($stok == 0){
-
 			$this->session->set_flashdata('pesan', 'Maaf stok Anda Habis Silahkan Hubungi Admin');
 			redirect('Transaksi','refresh');
 
 		}else{
-
 			$data = array(
 				'id'      => $bk->kode_barang,
 				'qty'     => 1,

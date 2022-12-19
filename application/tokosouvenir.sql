@@ -49,7 +49,7 @@ INSERT INTO `barang` (`kode_barang`, `nama_barang`, `kode_kategori`, `merk`, `ha
 (5, 'Papan Kayu Lingkaran', 2, '', 75000, 1500),
 (6, 'Papan Kayu Persegi', 2, '', 100000, 1000),
 (7, 'Keranjang Tangan', 3, '', 50000, 1000),
-(8, 'Keranjang Lingkarang', 3, '', 75000, 1500);
+(8, 'Keranjang Lingkaran', 3, '', 75000, 1500);
 
 -- --------------------------------------------------------
 

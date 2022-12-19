@@ -1,8 +1,8 @@
 Toko Souvenir<br>
 ____________________________<br>
-No Nota : <?= $ts->kode_transaksi?><br>
-Nama Kasir : <?= $ts->nama_user?><br>
-Tanggal Transaksi : <?= $ts->tanggal_beli?>
+No Nota 			: <?= $ts->kode_transaksi?><br>
+Nama Kasir 			: <?= $ts->nama_user?><br>
+Tanggal Transaksi 	: <?= $ts->tanggal_beli?><br>
 
 
 <table border="1px solid black" style="border-collapse: collapse;">

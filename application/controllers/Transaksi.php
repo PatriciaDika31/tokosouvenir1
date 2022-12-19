@@ -22,21 +22,17 @@ class Transaksi extends CI_Controller {
 		$this->load->view('template', $data, FALSE);
 	}else{
 			redirect('Login','refresh');
-
-
 	}
 	}
 
 	public function transaksi(){
 		if($this->input->post('bayar')){
-
 			$this->form_validation->set_rules('pembeli', 'pembeli', 'trim|required');
 			$this->form_validation->set_rules('bayaru', 'bayar', 'trim|required|greater_than_equal_to[$this->cart->total()]');
 
 			if ($this->form_validation->run() == TRUE ) {
 
 			if($this->mts->cekstok() == 1){
-
 				$id_nota = $this->mts->simpan_db();
 
 				if($id_nota){
