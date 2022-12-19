@@ -49,9 +49,6 @@ class Cart extends CI_Controller {
 		$this->cart->destroy();
 		redirect('Transaksi','refresh');
 	}
-
-
-
 }
 
 /* End of file Cart.php */
